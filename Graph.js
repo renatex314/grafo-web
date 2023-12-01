@@ -145,7 +145,7 @@ class Graph {
     while (!reachedStart) {
       const nextUuid = dijkstraTable[currentUuid].previousNodeUuid;
 
-      if (currentUuid === nextUuid) {
+      if (currentUuid === nextUuid || nextUuid === null) {
         finalNodes.push(
           this.nodes.find((node) => node.uuid === currentUuid)
         );

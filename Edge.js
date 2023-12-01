@@ -23,7 +23,7 @@ class Edge {
     canvasContext.beginPath();
     canvasContext.moveTo(this.node1.x, this.node1.y);
     canvasContext.lineTo(this.node2.x, this.node2.y);
-    canvasContext.strokeStyle = highlighted ? 'green' : 'black';
+    canvasContext.strokeStyle = highlighted ? 'orange' : 'black';
     canvasContext.lineWidth = 10;
     canvasContext.stroke();
     canvasContext.closePath();
