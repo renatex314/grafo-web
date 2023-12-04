@@ -115,6 +115,13 @@ class Graph {
           dijkstraTable[prev].cost < dijkstraTable[curr].cost ? prev : curr
         );
 
+      if (lessCostNotVisitedNodeUuid === finalNode.uuid) {
+        console.log("finalizou", dijkstraTable);
+
+        dijkstraTable[lessCostNotVisitedNodeUuid].visited = true;
+        break;
+      }
+
       const currentNode = this.nodes.find(
         (node) => node.uuid === lessCostNotVisitedNodeUuid
       );
