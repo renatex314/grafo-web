@@ -31,6 +31,7 @@ class Edge {
       canvasContext.beginPath();
       canvasContext.moveTo(this.node1.x, this.node1.y);
       canvasContext.lineTo(this.node2.x, this.node2.y);
+      canvasContext.lineCap = 'round';
       canvasContext.strokeStyle = highlighted ? "orange" : "black";
       canvasContext.lineWidth = 10;
       canvasContext.stroke();

@@ -9,8 +9,6 @@ const updateCanvasSize = () => {
   canvas.height = window.innerHeight;
 };
 
-window.addEventListener("resize", updateCanvasSize);
-
 updateCanvasSize();
 
 const graph = new Graph();
@@ -105,6 +103,11 @@ window.addEventListener("mousemove", (ev) => {
     currentOriginNode = nearestNode;
     animatePathsCalculation();
   }
+});
+
+window.addEventListener('resize', () => {
+  updateCanvasSize();
+  animatePathsCalculation();
 });
 
 animatePathsCalculation();
